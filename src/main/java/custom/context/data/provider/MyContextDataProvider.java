@@ -5,9 +5,11 @@ import org.apache.logging.log4j.core.util.ContextDataProvider;
 
 public class MyContextDataProvider implements ContextDataProvider {
 
+  static final Map<String, String> MAP = Map.of("tenant", "tenant1");
+
   @Override
   public Map<String, String> supplyContextData() {
-    return Map.of("tenant", "tenant1");
+    return MAP;
   }
 
 }
